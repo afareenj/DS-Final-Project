@@ -13,11 +13,22 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("Saccade Data Analysis"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
+      fileInput("file1", "Choose MAT File",
+                multiple = TRUE, accept = NULL, width = NULL, buttonLabel = "Browse...",
+                placeholder = "No file selected"
+      ),
+      fileInput("file2", "Choose MAT File",
+                multiple = TRUE, accept = NULL, width = NULL, buttonLabel = "Browse...",
+                placeholder = "No file selected"
+      ),
+      numericInput("start","Starting Index:",1,min=1,step=1),
+      numericInput("end","Ending Index:",20000,min=1,step=1),
+      submitButton("Submit"),
        sliderInput("bins",
                    "Number of bins:",
                    min = 1,
@@ -27,7 +38,13 @@ shinyUI(fluidPage(
     
     # Show a plot of the generated distribution
     mainPanel(
-       plotOutput("distPlot")
+      plotOutput("saccPlot1"),
+      plotOutput("saccPlot2"),
+      plotOutput("saccPlot3"),
+      plotOutput("saccPlot4"),
+      plotOutput("saccPlot5"),
+      plotOutput("saccPlot6"),
+      plotOutput("distPlot")
     )
   )
 ))
