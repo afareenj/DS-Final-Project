@@ -27,24 +27,15 @@ shinyUI(fluidPage(
                 placeholder = "No file selected"
       ),
       numericInput("start","Starting Index:",1,min=1,step=1),
-      numericInput("end","Ending Index:",20000,min=1,step=1),
-      submitButton("Submit"),
-       sliderInput("bins",
-                   "Number of bins:",
-                   min = 1,
-                   max = 50,
-                   value = 30)
+      numericInput("end","Ending Index:",10000,min=1,step=1),
+      submitButton("Submit")
     ),
     
     # Show a plot of the generated distribution
     mainPanel(
-      plotOutput("saccPlot1"),
-      plotOutput("saccPlot2"),
-      plotOutput("saccPlot3"),
-      plotOutput("saccPlot4"),
-      plotOutput("saccPlot5"),
-      plotOutput("saccPlot6"),
-      plotOutput("distPlot")
+      plotOutput("vigPlot1"),
+      plotOutput("vigPlot2"),
+      plotOutput("saccPlot1")
     )
   )
 ))
