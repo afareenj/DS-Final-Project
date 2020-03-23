@@ -1,0 +1,12 @@
+name: SaccadeApp
+title: SaccadeApp
+username:
+account: afareen-jaleel
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 904908
+bundleId: 2059356
+url: https://afareen-jaleel.shinyapps.io/SaccadeApp/
+when: 1556947082.33391
+asMultiple: FALSE
+asStatic: FALSE
